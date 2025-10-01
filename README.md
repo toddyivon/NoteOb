@@ -16,7 +16,7 @@ A simple command-line tool to quickly capture notes directly to your Obsidian va
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/NoteOb.git
+git clone https://github.com/toddyivon/NoteOb.git
 cd NoteOb
 ```
 
@@ -35,21 +35,25 @@ VAULT_PATH="/path/to/your/obsidian/vault"
 sudo cp note.sh /usr/local/bin/note
 ```
 
-Or add an alias to your `~/.bashrc` or `~/.zshrc`:
+Or add an alias to your shell configuration file:
+
+**For Bash:**
 ```bash
-alias note='/path/to/NoteOb/note.sh'
+echo "alias note='$(pwd)/note.sh'" >> ~/.bashrc
+source ~/.bashrc
 ```
 
-5. Reload your shell configuration:
-```bash
-source ~/.bashrc  # or source ~/.zshrc
+**For Zsh:**
+```zsh
+echo "alias note='$(pwd)/note.sh'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ### macOS
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/NoteOb.git
+git clone https://github.com/toddyivon/NoteOb.git
 cd NoteOb
 ```
 
@@ -68,14 +72,18 @@ VAULT_PATH="/Users/yourusername/Documents/ObsidianVault"
 sudo cp note.sh /usr/local/bin/note
 ```
 
-Or add an alias to your `~/.zshrc` or `~/.bash_profile`:
-```bash
-alias note='/path/to/NoteOb/note.sh'
+Or add an alias to your shell configuration file:
+
+**For Zsh (default on macOS Catalina and later):**
+```zsh
+echo "alias note='$(pwd)/note.sh'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
-5. Reload your shell configuration:
+**For Bash:**
 ```bash
-source ~/.zshrc  # or source ~/.bash_profile
+echo "alias note='$(pwd)/note.sh'" >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 ### Windows
@@ -84,7 +92,7 @@ source ~/.zshrc  # or source ~/.bash_profile
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/NoteOb.git
+git clone https://github.com/toddyivon/NoteOb.git
 cd NoteOb
 ```
 
@@ -102,14 +110,18 @@ VAULT_PATH="/c/Users/YourUsername/Documents/ObsidianVault"
 chmod +x note.sh
 ```
 
-4. Add an alias to your `~/.bashrc`:
+4. Add an alias to your shell configuration file:
+
+**For Bash (Git Bash/WSL):**
 ```bash
-alias note='/path/to/NoteOb/note.sh'
+echo "alias note='$(pwd)/note.sh'" >> ~/.bashrc
+source ~/.bashrc
 ```
 
-5. Reload your shell configuration:
-```bash
-source ~/.bashrc
+**For Zsh (WSL with Zsh):**
+```zsh
+echo "alias note='$(pwd)/note.sh'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 #### Using PowerShell (Alternative)
